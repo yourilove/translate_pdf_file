@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>translate_pdf</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <script type="text/javascript" src="{% static 'js/index.js' %}"></script>
+</head>
+<body>
+    <div class="title" id="title">
+        <h1>Welcome to translate page</h1>
+    </div>
+    <div class="left" id='left'>
+        <h2>please choose the files you want to translate:</h2>
+        <form action="" method="post">
+            {% csrf_token %}
+            <input type="button" id='clear-all' value='clear all'>
+            <input type="button" id='upload-all' value='upload all'>
+            <br>
+            <input type="file" id="uploadform-pdf-files" name="files" multiple="multiple" accept=".pdf">
+                            
+            <table id="left-table">
+                <tbody id="left-table-tbody">
+                    
+                </tbody>
+            </table>
+                
+            
+
+        </form>
+        
+    </div>
+    <div class="right" id='right'>
+        <h2>please translate the files you uploads:</h2>
+        <input type="button" id='translate-all' value='translate all' disabled>
+        <input type="button" id='download-all' value='download all' disabled>
+        <br>
+        <div id='right-div1'></div>   
+        <table id="right-table">
+            <tbody id="right-table-tbody">
+                
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
