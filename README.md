@@ -4,10 +4,10 @@ to translate pdf files from other languages to chinese.
 # envirenment bulid
 1.  python 3.7.8
 2.  pip install Django=2.2.1
-3.  pip install -U channels
-4.  pip install channels_redis
+3.  pip install -U channels=2.2.0
+4.  pip install channels_redis=3.2.0
       download redis(version==5.0.10) server in URL:https://github.com/tporadowski/redis/releases
-5.  pip install daphne
+5.  pip install daphne=2.5.0
 
 # run project
 1.  python manage.py runserver
